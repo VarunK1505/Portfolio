@@ -11,7 +11,7 @@ const stats = [
   { label: 'CGPA', value: '9.1', icon: Award, color: 'primary' },
   { label: 'Years Experience', value: '2+', icon: Brain, color: 'secondary' },
   { label: 'AI Projects', value: '20+', icon: Target, color: 'accent' },
-  { label: 'Model Accuracy', value: '99%+', icon: Zap, color: 'primary' },
+  { label: 'Average Model Accuracy', value: '95%+', icon: Zap, color: 'primary' },
 ];
 
 const skills = [
