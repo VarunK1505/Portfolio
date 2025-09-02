@@ -378,7 +378,7 @@ export default function Contact() {
               <Button
                 variant="outline"
                 size="lg"
-                href="Portfolio/VarunFulltimeResume.pdf"
+                href="/VarunFulltimeResume.pdf"
               >
                 <FileText className="w-4 h-4 mr-2" />
                 Download Resume
