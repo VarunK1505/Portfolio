@@ -12,7 +12,9 @@ import {
   Brain,
   Eye,
   MessageSquare,
-  BarChart3
+  BarChart3,
+  Play,
+  Car
 } from 'lucide-react';
 import Card from './ui/Card';
 import Button from './ui/Button';
@@ -32,8 +34,25 @@ const projects = [
     ],
     technologies: ['Deep Learning', 'Computer Vision', 'Medical AI', 'TensorFlow', 'Python'],
     links: [
-      { label: 'IEEE Paper', href: '#', icon: FileText },
-      { label: 'GitHub', href: '#', icon: Github },
+      { label: 'IEEE Paper', href: 'https://ieeexplore.ieee.org/abstract/document/10601740', icon: FileText },
+    ],
+    featured: true
+  },
+  {
+    title: 'Yard Tracking System',
+    description: 'Advanced computer vision system for real-time vehicle tracking and monitoring in industrial yards with automated analytics.',
+    image: '/api/placeholder/400/250',
+    category: 'Computer Vision',
+    icon: Car,
+    color: 'secondary',
+    metrics: [
+      { label: 'Tracking Accuracy', value: '96.8%', icon: TrendingUp },
+      { label: 'Real-time Processing', value: '30 FPS', icon: Award },
+      { label: 'Vehicle Types', value: '15+', icon: TrendingUp },
+    ],
+    technologies: ['Computer Vision', 'YOLO', 'OpenCV', 'Real-time Tracking', 'Python'],
+    links: [
+      { label: 'Video Demo', href: '#', icon: Play, isVideo: true },
     ],
     featured: true
   },
@@ -43,18 +62,15 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Finance AI',
     icon: BarChart3,
-    color: 'secondary',
+    color: 'accent',
     metrics: [
       { label: 'R² Score', value: '0.997', icon: TrendingUp },
       { label: 'Improvement', value: '0.976 → 0.997', icon: Award },
       { label: 'Accuracy', value: '94.2%', icon: TrendingUp },
     ],
     technologies: ['Machine Learning', 'NLP', 'Regression Analysis', 'Sentiment Analysis', 'Python'],
-    links: [
-      { label: 'Demo', href: '#', icon: ExternalLink },
-      { label: 'GitHub', href: '#', icon: Github },
-    ],
-    featured: true
+    links: [],
+    featured: false
   },
   {
     title: 'AI-based Team Builder',
@@ -62,7 +78,7 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'HR Tech',
     icon: Brain,
-    color: 'accent',
+    color: 'primary',
     metrics: [
       { label: 'Users Analyzed', value: '500+', icon: TrendingUp },
       { label: 'Published', value: 'IEEE Xplore', icon: Award },
@@ -70,8 +86,8 @@ const projects = [
     ],
     technologies: ['Machine Learning', 'Personality Analysis', 'Team Optimization', 'Python', 'Scikit-Learn'],
     links: [
-      { label: 'Paper', href: '#', icon: FileText },
-      { label: 'Demo', href: '#', icon: ExternalLink },
+      { label: 'IEEE Paper', href: 'https://ieeexplore.ieee.org/document/10480783', icon: FileText },
+      { label: 'GitHub', href: 'https://github.com/VarunK1505/PERSONA-Framework-to-Boost-Team-Effectiveness-through-AI-based-Personality-Skill-Based-Assessment', icon: Github },
     ],
     featured: false
   },
@@ -81,7 +97,7 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Marketing AI',
     icon: MessageSquare,
-    color: 'primary',
+    color: 'secondary',
     metrics: [
       { label: 'Forecasting Accuracy', value: '92.6%', icon: TrendingUp },
       { label: 'Market Coverage', value: '15+ Industries', icon: Award },
@@ -89,8 +105,7 @@ const projects = [
     ],
     technologies: ['NLP', 'Predictive Modeling', 'Market Analysis', 'Python', 'TensorFlow'],
     links: [
-      { label: 'Platform', href: '#', icon: ExternalLink },
-      { label: 'GitHub', href: '#', icon: Github },
+      { label: 'GitHub', href: 'https://github.com/VarunK1505/Cognitisements', icon: Github },
     ],
     featured: false
   },
@@ -100,18 +115,15 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Computer Vision',
     icon: Eye,
-    color: 'secondary',
+    color: 'accent',
     metrics: [
       { label: 'Accuracy Improvement', value: '20%', icon: TrendingUp },
       { label: 'Processing Time', value: '40% Reduction', icon: Award },
       { label: 'Claims Processed', value: '10K+ Daily', icon: TrendingUp },
     ],
     technologies: ['Computer Vision', 'YOLO', 'OpenCV', 'Insurance Tech', 'Python'],
-    links: [
-      { label: 'Demo', href: '#', icon: ExternalLink },
-      { label: 'Case Study', href: '#', icon: FileText },
-    ],
-    featured: true
+    links: [],
+    featured: false
   },
   {
     title: 'Multi-agent AI Surveillance System',
@@ -119,17 +131,14 @@ const projects = [
     image: '/api/placeholder/400/250',
     category: 'Security AI',
     icon: Brain,
-    color: 'accent',
+    color: 'primary',
     metrics: [
       { label: 'Detection Accuracy', value: '80%+', icon: TrendingUp },
       { label: 'Real-time Processing', value: 'Yes', icon: Award },
       { label: 'Alert Generation', value: 'Automated', icon: TrendingUp },
     ],
     technologies: ['Multi-agent Systems', 'Computer Vision', 'Real-time Processing', 'Security AI', 'Python'],
-    links: [
-      { label: 'Documentation', href: '#', icon: FileText },
-      { label: 'GitHub', href: '#', icon: Github },
-    ],
+    links: [],
     featured: false
   }
 ];
@@ -169,6 +178,11 @@ export default function Projects() {
           badge: 'bg-[#00d4ff]/20 text-[#00d4ff]',
         };
     }
+  };
+
+  const handleVideoClick = () => {
+    // Open the video file in a new tab/window
+    window.open('/yardtracking.mp4', '_blank');
   };
 
   const featuredProjects = projects.filter(project => project.featured);
@@ -260,16 +274,29 @@ export default function Projects() {
                     {/* Links */}
                     <div className="flex space-x-2">
                       {project.links.map((link, idx) => (
-                        <Button
-                          key={idx}
-                          variant="outline"
-                          size="sm"
-                          href={link.href}
-                          className="flex-1"
-                        >
-                          <link.icon className="w-4 h-4 mr-2" />
-                          {link.label}
-                        </Button>
+                        link.isVideo ? (
+                          <Button
+                            key={idx}
+                            variant="outline"
+                            size="sm"
+                            onClick={handleVideoClick}
+                            className="flex-1"
+                          >
+                            <link.icon className="w-4 h-4 mr-2" />
+                            {link.label}
+                          </Button>
+                        ) : (
+                          <Button
+                            key={idx}
+                            variant="outline"
+                            size="sm"
+                            href={link.href}
+                            className="flex-1"
+                          >
+                            <link.icon className="w-4 h-4 mr-2" />
+                            {link.label}
+                          </Button>
+                        )
                       ))}
                     </div>
                   </Card>
@@ -346,21 +373,23 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* Links */}
-                    <div className="flex space-x-2">
-                      {project.links.map((link, idx) => (
-                        <Button
-                          key={idx}
-                          variant="outline"
-                          size="sm"
-                          href={link.href}
-                          className="flex-1 text-xs"
-                        >
-                          <link.icon className="w-3 h-3 mr-1" />
-                          {link.label}
-                        </Button>
-                      ))}
-                    </div>
+                    {/* Links - Only show if links exist */}
+                    {project.links.length > 0 && (
+                      <div className="flex space-x-2">
+                        {project.links.map((link, idx) => (
+                          <Button
+                            key={idx}
+                            variant="outline"
+                            size="sm"
+                            href={link.href}
+                            className="flex-1 text-xs"
+                          >
+                            <link.icon className="w-3 h-3 mr-1" />
+                            {link.label}
+                          </Button>
+                        ))}
+                      </div>
+                    )}
                   </Card>
                 </motion.div>
               );
