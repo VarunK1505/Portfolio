@@ -24,10 +24,9 @@ const skillCategories = [
     icon: Code,
     color: 'primary',
     skills: [
-      { name: 'Python', level: 85, icon: Code },
-      { name: 'JavaScript', level: 85, icon: Code },
-      { name: 'SQL', level: 90, icon: Database },
-      { name: 'R', level: 75, icon: BarChart3 },
+      { name: 'Python', level: 90, icon: Code },
+      { name: 'JavaScript', level: 60, icon: Code },
+      { name: 'SQL', level: 70, icon: Database },
     ]
   },
   {
@@ -35,12 +34,12 @@ const skillCategories = [
     icon: Brain,
     color: 'secondary',
     skills: [
-      { name: 'TensorFlow', level: 92, icon: Brain },
-      { name: 'PyTorch', level: 88, icon: Brain },
-      { name: 'Keras', level: 90, icon: Brain },
-      { name: 'Scikit-Learn', level: 94, icon: Brain },
-      { name: 'YOLO', level: 85, icon: Eye },
-      { name: 'Large Language Models', level: 87, icon: MessageSquare },
+      { name: 'TensorFlow', level: 90, icon: Brain },
+      { name: 'PyTorch', level: 85, icon: Brain },
+      { name: 'Keras', level: 85, icon: Brain },
+      { name: 'Scikit-Learn', level: 90, icon: Brain },
+      { name: 'YOLO', level: 90, icon: Eye },
+      { name: 'Large Language Models', level: 85, icon: MessageSquare },
     ]
   },
   {
@@ -48,11 +47,11 @@ const skillCategories = [
     icon: Eye,
     color: 'accent',
     skills: [
-      { name: 'OpenCV', level: 89, icon: Eye },
-      { name: 'Ultralytics', level: 86, icon: Eye },
-      { name: 'Image Segmentation', level: 91, icon: Eye },
-      { name: 'Object Detection', level: 88, icon: Eye },
-      { name: 'Facial Recognition', level: 84, icon: Eye },
+      { name: 'OpenCV', level: 85, icon: Eye },
+      { name: 'Ultralytics', level: 90, icon: Eye },
+      { name: 'Image Segmentation', level: 90, icon: Eye },
+      { name: 'Object Detection', level: 95, icon: Eye },
+      { name: 'Facial Recognition', level: 85, icon: Eye },
     ]
   },
   {
@@ -64,7 +63,7 @@ const skillCategories = [
       { name: 'LLMs', level: 87, icon: MessageSquare },
       { name: 'Sentence-Transformers', level: 85, icon: MessageSquare },
       { name: 'RASA', level: 82, icon: MessageSquare },
-      { name: 'GPT Integration', level: 89, icon: MessageSquare },
+      { name: 'GPT Integration', level: 85, icon: MessageSquare },
       { name: 'Sentiment Analysis', level: 86, icon: MessageSquare },
     ]
   },
@@ -77,7 +76,7 @@ const skillCategories = [
       { name: 'NumPy', level: 93, icon: Database },
       { name: 'Matplotlib', level: 88, icon: BarChart3 },
       { name: 'Seaborn', level: 85, icon: BarChart3 },
-      { name: 'GeoPandas', level: 78, icon: Database },
+      { name: 'GeoPandas', level: 70, icon: Database },
     ]
   },
   {
@@ -88,8 +87,7 @@ const skillCategories = [
       { name: 'Git', level: 92, icon: GitBranch },
       { name: 'Selenium', level: 80, icon: Wrench },
       { name: 'BeautifulSoup', level: 85, icon: Wrench },
-      { name: 'AWS', level: 82, icon: Cloud },
-      { name: 'Label Studio', level: 78, icon: Wrench },
+      { name: 'Label Studio', level: 75, icon: Wrench },
       { name: 'CVAT', level: 75, icon: Wrench },
     ]
   },
