@@ -19,6 +19,14 @@ import {
 import Card from './ui/Card';
 import Button from './ui/Button';
 
+// Define the link type with optional isVideo property
+type ProjectLink = {
+  label: string;
+  href: string;
+  icon: any;
+  isVideo?: boolean;
+};
+
 const projects = [
   {
     title: 'Gastrointestinal Tract Image Segmentation',
@@ -35,7 +43,7 @@ const projects = [
     technologies: ['Deep Learning', 'Computer Vision', 'Medical AI', 'TensorFlow', 'Python'],
     links: [
       { label: 'IEEE Paper', href: 'https://ieeexplore.ieee.org/abstract/document/10601740', icon: FileText },
-    ],
+    ] as ProjectLink[],
     featured: true
   },
   {
@@ -53,7 +61,7 @@ const projects = [
     technologies: ['Computer Vision', 'YOLO', 'OpenCV', 'Real-time Tracking', 'Python'],
     links: [
       { label: 'Video Demo', href: '#', icon: Play, isVideo: true },
-    ],
+    ] as ProjectLink[],
     featured: true
   },
   {
@@ -69,7 +77,7 @@ const projects = [
       { label: 'Accuracy', value: '94.2%', icon: TrendingUp },
     ],
     technologies: ['Machine Learning', 'NLP', 'Regression Analysis', 'Sentiment Analysis', 'Python'],
-    links: [],
+    links: [] as ProjectLink[],
     featured: false
   },
   {
@@ -88,7 +96,7 @@ const projects = [
     links: [
       { label: 'IEEE Paper', href: 'https://ieeexplore.ieee.org/document/10480783', icon: FileText },
       { label: 'GitHub', href: 'https://github.com/VarunK1505/PERSONA-Framework-to-Boost-Team-Effectiveness-through-AI-based-Personality-Skill-Based-Assessment', icon: Github },
-    ],
+    ] as ProjectLink[],
     featured: false
   },
   {
@@ -106,7 +114,7 @@ const projects = [
     technologies: ['NLP', 'Predictive Modeling', 'Market Analysis', 'Python', 'TensorFlow'],
     links: [
       { label: 'GitHub', href: 'https://github.com/VarunK1505/Cognitisements', icon: Github },
-    ],
+    ] as ProjectLink[],
     featured: false
   },
   {
@@ -122,7 +130,7 @@ const projects = [
       { label: 'Claims Processed', value: '10K+ Daily', icon: TrendingUp },
     ],
     technologies: ['Computer Vision', 'YOLO', 'OpenCV', 'Insurance Tech', 'Python'],
-    links: [],
+    links: [] as ProjectLink[],
     featured: false
   },
   {
@@ -138,7 +146,7 @@ const projects = [
       { label: 'Alert Generation', value: 'Automated', icon: TrendingUp },
     ],
     technologies: ['Multi-agent Systems', 'Computer Vision', 'Real-time Processing', 'Security AI', 'Python'],
-    links: [],
+    links: [] as ProjectLink[],
     featured: false
   }
 ];
