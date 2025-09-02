@@ -190,7 +190,7 @@ export default function Projects() {
 
   const handleVideoClick = () => {
     // Open the video file in a new tab/window
-    window.open('/yardtracking.mp4', '_blank');
+    window.open('/Portfolio/yardtracking.mp4', '_blank');
   };
 
   const featuredProjects = projects.filter(project => project.featured);
