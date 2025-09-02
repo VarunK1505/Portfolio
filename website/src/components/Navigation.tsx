@@ -73,7 +73,7 @@ export default function Navigation() {
             <Button
               variant="outline"
               size="sm"
-              href="/VarunFulltimeResume.pdf"
+              href="/Portfolio/VarunFulltimeResume.pdf"
               className="ml-4"
             >
               <Download className="w-4 h-4 mr-2" />
@@ -117,7 +117,7 @@ export default function Navigation() {
                 <Button
                   variant="outline"
                   size="sm"
-                  href="/VarunFulltimeResume.pdf"
+                  href="/Portfolio/VarunFulltimeResume.pdf"
                   className="w-full"
                 >
                   <Download className="w-4 h-4 mr-2" />

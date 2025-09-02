@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
 import Button from './ui/Button';
+import varunPhoto from '@/../public/varun_photoid.png';
 
 export default function Hero() {
   const [currentText, setCurrentText] = useState('');
@@ -221,7 +222,7 @@ export default function Hero() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/varun_photoid.png"
+                  src={varunPhoto}
                   alt="Varun Kamath"
                   fill
                   className="object-cover object-[center_45%]"
