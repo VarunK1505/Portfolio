@@ -23,7 +23,7 @@ import Button from './ui/Button';
 type ProjectLink = {
   label: string;
   href: string;
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   isVideo?: boolean;
 };
 
