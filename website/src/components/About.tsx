@@ -9,18 +9,18 @@ import ProgressBar from './ui/ProgressBar';
 
 const stats = [
   { label: 'CGPA', value: '9.1', icon: Award, color: 'primary' },
-  { label: 'Years Experience', value: '4+', icon: Brain, color: 'secondary' },
+  { label: 'Years Experience', value: '2+', icon: Brain, color: 'secondary' },
   { label: 'AI Projects', value: '20+', icon: Target, color: 'accent' },
   { label: 'Model Accuracy', value: '99%+', icon: Zap, color: 'primary' },
 ];
 
 const skills = [
-  { name: 'Machine Learning', level: 95 },
-  { name: 'Computer Vision', level: 90 },
-  { name: 'Natural Language Processing', level: 88 },
-  { name: 'Deep Learning', level: 92 },
-  { name: 'Python Development', level: 96 },
-  { name: 'AI Research', level: 89 },
+  { name: 'Machine Learning', level: 90 },
+  { name: 'Computer Vision', level: 95 },
+  { name: 'Natural Language Processing', level: 85 },
+  { name: 'Deep Learning', level: 90 },
+  { name: 'Python Development', level: 75 },
+  { name: 'AI Research', level: 90 },
 ];
 
 export default function About() {
@@ -59,7 +59,7 @@ export default function About() {
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   I&apos;m an AI Engineer with a passion for building intelligent solutions that drive innovation. 
-                  With over 4 years of experience in machine learning and artificial intelligence, I specialize 
+                  With over 2 years of experience in machine learning and artificial intelligence, I specialize 
                   in computer vision, natural language processing, and deep learning.
                 </p>
                 <p>
