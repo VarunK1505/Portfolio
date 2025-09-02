@@ -13,7 +13,6 @@ import {
   Cpu,
   Zap,
   GitBranch,
-  Cloud,
   BarChart3
 } from 'lucide-react';
 import Card from './ui/Card';

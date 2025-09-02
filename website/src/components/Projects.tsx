@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { 
-  ExternalLink, 
   Github, 
   FileText, 
   Award,
@@ -23,7 +22,7 @@ import Button from './ui/Button';
 type ProjectLink = {
   label: string;
   href: string;
-  icon: any;
+  icon: (props: { className?: string; size?: number }) => JSX.Element;
   isVideo?: boolean;
 };
 
