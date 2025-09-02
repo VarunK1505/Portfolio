@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -22,7 +23,7 @@ import Button from './ui/Button';
 type ProjectLink = {
   label: string;
   href: string;
-  icon: (props: { className?: string; size?: number }) => JSX.Element;
+  icon: any;
   isVideo?: boolean;
 };
 
